@@ -1,15 +1,25 @@
-﻿namespace SurveyOfThis
+﻿using System;
+
+namespace SurveyOfThis
 {
     public class Parent
     {
-        public void accept(Visitor visitor)
+        public virtual void acceptOverrided(Visitor visitor)
         {
             visitor.visit(this);
         }
 
-        public virtual void accept2(Visitor visitor)
+        public void acceptNotOverrided(Visitor visitor)
         {
+            Type type = this.GetType();
+            Console.Write("This type is" + type.ToString() + ":");
             visitor.visit(this);
+        }
+
+        public void acceptDynamicType(Visitor visitor)
+        {
+            dynamic my = this;
+            visitor.visit(my);
         }
     }
 }

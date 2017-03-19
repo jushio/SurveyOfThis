@@ -7,7 +7,7 @@
         //    visitor.visit(this);
         //}
 
-        public override void accept2(Visitor visitor)
+        public override void acceptOverrided(Visitor visitor)
         {
             visitor.visit(this);
         }

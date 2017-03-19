@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Child.cs" />
     <Compile Include="Parent.cs" />
-    <Compile Include="PrintVisitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Visitor.cs" />
